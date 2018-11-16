@@ -9,6 +9,10 @@ case class RealtimeAdsLog(date:Date,province:String,city:String,userId:String,ad
     val perDay: String = new SimpleDateFormat("yyyy-MM-dd").format(date)
     perDay+"_"+userId+"_"+adid
   }
+  def toAreaCityCountPerdayKey(): String ={
+    val perDay: String = new SimpleDateFormat("yyyy-MM-dd").format(date)
+    perDay+"_"+province+"_"+city+"_"+adid
+  }
 }
 
 
